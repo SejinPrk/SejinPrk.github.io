@@ -1,8 +1,8 @@
 # Setup
-title: Not Pure Poole
-description: A simple, beautiful, and powerful Jekyll theme for blogs
-url: https://vszhub.github.io
-avatar: /avatar.jpeg
+title: Hello, this is Sejin !
+description: DevOps Developing
+url: https://github.com/SejinPrk
+avatar: /sejinpic.jpeg
 paginate: 5
 permalink: pretty
 cover_image: /bg.jpeg
@@ -28,15 +28,15 @@ exclude:
   - not-pure-poole.gemspec
 
 # Optimize Jekyl SEO Tag
-twitter:
-  username: vszhub
+github:
+  username: SejinPrk
   card: summary
 logo: logo.png
 social:
-  name: Songzi Vong
+  name: Sejin Park
   links:
-    - https://twitter.com/vszhub
-    - https://github.com/vszhub
+    - https://www.instagram.com/sejinprk/
+    - https://github.com/SejinPrk
 google_site_verification: xxxxx
 lang: en
 
