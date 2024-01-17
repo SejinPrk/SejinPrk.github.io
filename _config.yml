@@ -2,10 +2,10 @@
 title: Hello, this is Sejin !
 description: DevOps Developing
 url: https://github.com/SejinPrk
-avatar: /sejinpic.jpeg
+avatar: /sejinp.jpeg
 paginate: 5
 permalink: pretty
-cover_image: /sejinpic.jpeg
+cover_image: /IMG_2643.jpeg
 
 # Gems
 plugins:
