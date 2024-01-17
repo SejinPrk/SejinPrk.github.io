@@ -6,7 +6,6 @@ tags: [jekyll theme, jekyll, tutorial]
 toc:  true
 ---
 Welcome to **Sejin's blog**! This is my blog to study DevOps programming.
-
 {: .message }
 
 First, do you notice the TOC on the right side? Try to scroll down to read this post, you'll find that the TOC is always sticky in the viewport.
