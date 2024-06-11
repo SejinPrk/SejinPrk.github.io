@@ -1,5 +1,5 @@
 ---
-title:  "[Code Tree - Novice Mid] 01. 함수"
+title:  "[Code Tree - Novice Mid] 01. 함수: 값을 반환하지 않는 함수"
 excerpt: "코드트리 문제 풀이 - JAVA"
 
 categories:
@@ -15,7 +15,8 @@ last_modified_at: 2024-06-11
 ---
 ## [JAVA 문법으로 작성함.] 
 
-# Novice Mid
+# Novice Mid: 01. 함수
+# 값을 반환하지 않는 함수
 
 ## 1. 별 찍는 것을 5번 반복하기
 #### => 별 10개를 찍는 것을 5번 반복하는 프로그램
