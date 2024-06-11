@@ -11,7 +11,7 @@ toc: true
 toc_sticky: true
  
 date: 2024-06-09
-last_modified_at: 2024-06-09
+last_modified_at: 2024-06-11
 ---
 ## [JAVA 문법으로 작성함.] 
 
@@ -81,6 +81,87 @@ public class Main {
 12345^&*()_
 12345^&*()_
 ```
+
+## 3. 함수를 이용해 직사각형 만들기
+
+#### => n, m이 주어졌을 때, 전부 1로 이루어져 있는 n * m 크기의 직사각형을 출력하는 프로그램
+#### 조건: 1 ≤ n, m ≤ 100
+
+### 코드: 
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void printRect(int n, int m) {
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < m; j++)
+                System.out.print("1");
+            System.out.println();
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int rowNum = sc.nextInt();
+        int colNum = sc.nextInt();
+        printRect(rowNum, colNum);
+    }
+}
+```
+
+### 입력:
+```
+2 3
+```
+
+### 출력: 
+```
+111
+111
+```
+
+## 4. 숫자로 이루어진 사각형
+
+#### => 일의 자리 숫자로 이루어진 N * N 모양 사각형을 출력하는 프로그램
+#### 조건: 1 ≤ N ≤ 100
+
+### 코드: 
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void printRect(int n) {
+        int cnt = 1;
+        for(int i = 1; i <= n; i++) {
+            for(int j = 1; j <= n; j++) {
+                System.out.print(cnt + " ");
+                cnt++;
+                if(cnt == 10)
+                    cnt = 1;
+            }
+            System.out.println();
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        printRect(n);
+    }
+}
+```
+
+### 입력:
+```
+4
+```
+
+### 출력: 
+```
+1 2 3 4
+5 6 7 8
+9 1 2 3
+4 5 6 7
+```
+
 
 
 ### 링크: [코드트리](https://www.codetree.ai/missions/5/problems/repeat-shooting-the-stars-five-times?&utm_source=clipboard&utm_medium=text)
