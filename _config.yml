@@ -1,8 +1,8 @@
 # Setup
 title: Sejin&#39;s Blog ♥
-description:  ☺ Seoul, Korea <br>☻ Lille, France
+description: ☺ Seoul, Korea <br>☻ Lille, France
 url: https://github.com/SejinPrk
-avatar: /IMG_2943.jpg
+avatar: /profile.jpeg
 paginate: 5
 permalink: pretty
 cover_image: /IMG_2944.jpg
@@ -56,4 +56,4 @@ sass:
 author:
   name: Sejin Park
   url: https://github.com/SejinPrk
-  email:  bestsaejin12@gmail.com
+  email: bestsaejin12@gmail.com
