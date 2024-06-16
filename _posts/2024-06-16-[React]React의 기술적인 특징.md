@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [React].React의 기술적인 특징
+title: [React]React의 기술적인 특징
 excerpt: "React 기술 공부"
 
 categories:
