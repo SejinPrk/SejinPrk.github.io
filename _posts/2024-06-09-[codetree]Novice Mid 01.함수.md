@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "[Code Tree - Novice Mid] 01-1. 함수: 값을 반환하지 않는 함수"
 excerpt: "코드트리 문제 풀이 - JAVA"
 
