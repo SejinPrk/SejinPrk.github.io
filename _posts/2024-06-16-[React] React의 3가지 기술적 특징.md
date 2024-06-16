@@ -1,5 +1,5 @@
 ---
-title: "[React] React의 기술적인 특징"
+title: "[React] React의 3가지 기술적인 특징"
 excerpt: "React 기술 공부"
 categories:
   - Blog
@@ -12,7 +12,7 @@ date: 2024-06-16
 last_modified_at: 2024-06-16
 ---
 
-## React.js의 기술적인 특징
+## React의 3가지 기술적인 특징
 
 ### 1. 컴포넌트를 기반으로 UI를 표현한다.
 
