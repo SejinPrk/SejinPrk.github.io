@@ -31,11 +31,12 @@ last_modified_at: 2024-06-16
 ### 3. 화면 업데이트가 빠르게 처리된다.
 
 - 브라우저가 화면에 렌더링되는 과정(Critical Rendering Path)
-- HTML → DOM
-  ⬇️
-  Render Tree → Layout → Painting
-  ⬆
+  HTML → DOM
+          ⬇️
+        Render Tree → Layout → Painting
+          ⬆
   CSS → CSSOM
+  
 - DOM: Document Object Model; html을 일종의 객체 모델로 변환 → 요소들의 위치, 배치, 모양에 관한 모든 정보
 - CSSOM: CSS Object Model; 요소들의 스타일과 관련된 모든 정보
 - Render Tree: DOM과 CSSOM을 합쳐 만듦. 렌더링 되어야 하는 모든 요소를 합친 것
