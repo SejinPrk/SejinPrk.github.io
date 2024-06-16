@@ -34,13 +34,13 @@ last_modified_at: 2024-06-16
  <img width="314" alt="스크린샷 2024-06-16 오후 12 55 08" src="https://github.com/SejinPrk/SejinPrk.github.io/assets/150787016/05805588-107d-43aa-8091-05fc021f5f7e">
 
   
-- DOM: Document Object Model; html을 일종의 객체 모델로 변환 → 요소들의 위치, 배치, 모양에 관한 모든 정보
-- CSSOM: CSS Object Model; 요소들의 스타일과 관련된 모든 정보
-- Render Tree: DOM과 CSSOM을 합쳐 만듦. 렌더링 되어야 하는 모든 요소를 합친 것
-- Layout: 렌더트리 안에 포함되어있는 요소들의 배치를 잡는 작업
-- Painting: 실제로 화면에 그려내는 과정.
+  - DOM: Document Object Model; html을 일종의 객체 모델로 변환 → 요소들의 위치, 배치, 모양에 관한 모든 정보
+  - CSSOM: CSS Object Model; 요소들의 스타일과 관련된 모든 정보
+  - Render Tree: DOM과 CSSOM을 합쳐 만듦. 렌더링 되어야 하는 모든 요소를 합친 것
+  - Layout: 렌더트리 안에 포함되어있는 요소들의 배치를 잡는 작업
+  - Painting: 실제로 화면에 그려내는 과정.
 
-  ⇒ 업데이트: JS가 DOM을 수정하면 전체 과정이 변경되면서 업데이트가 일어나는 것!
+⇒ 업데이트: JS가 DOM을 수정하면 전체 과정이 변경되면서 업데이트가 일어나는 것!
 - Layout, Painting은 상당히 오래 걸리는 과정 -> Reflow, Repainting이라고 부른다.
 - 따라서 렌더트리 이후의 과정을 다시 수행하면 성능이 악화된다.
 - ex. 브라우저 응답없음 페이지(브라우저 마비)
