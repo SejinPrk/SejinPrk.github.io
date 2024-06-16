@@ -31,11 +31,8 @@ last_modified_at: 2024-06-16
 ### 3. 화면 업데이트가 빠르게 처리된다.
 
 - 브라우저가 화면에 렌더링되는 과정(Critical Rendering Path)
-  HTML → DOM
-          ⬇️
-        Render Tree → Layout → Painting
-          ⬆
-  CSS → CSSOM
+ <img width="314" alt="스크린샷 2024-06-16 오후 12 55 08" src="https://github.com/SejinPrk/SejinPrk.github.io/assets/150787016/05805588-107d-43aa-8091-05fc021f5f7e">
+
   
 - DOM: Document Object Model; html을 일종의 객체 모델로 변환 → 요소들의 위치, 배치, 모양에 관한 모든 정보
 - CSSOM: CSS Object Model; 요소들의 스타일과 관련된 모든 정보
