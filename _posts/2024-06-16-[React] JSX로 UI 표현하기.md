@@ -8,8 +8,8 @@ tags:
   - Node.js
 toc: true
 toc_sticky: true
-date: 2024-06-16
-last_modified_at: 2024-06-16
+date: 2024-06-17
+last_modified_at: 2024-06-17
 ---
 
 React Component
