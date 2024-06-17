@@ -311,4 +311,137 @@ public class Main {
 true
 ```
 
+#### 7. 두 수의 거듭제곱
+
+#### => 두 정수 a^b의 값을 출력하는 프로그램
+
+#### 조건: 1 ≤ a, b ≤ 10
+
+### 코드:
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static int multiply(int a, int b) {
+        int result = 1;
+
+        for (int i = 0; i < b; i++) {
+            result *= a;
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        System.out.println(multiply(a, b));
+    }
+}
+```
+
+### 입력:
+
+```
+3 4
+```
+
+### 출력:
+
+```
+81
+```
+
+#### 8. 사칙연산 함수
+
+#### => 각 사칙연산에 해당하는 총 4개의 함수를 작성하고 정수의 연산식이 주어지면 적절한 함수를 호출하여 4칙연산의 연산결과를 출력하는 프로그램
+
+#### 단, '/'의 결과는 정수 부분만 출력하고, 사칙연산자 이외의 문자가 주어지는 경우에는 False을 출력
+
+#### 조건: 1 ≤ a, c ≤ 100
+
+### 코드:
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        char o = sc.next().charAt(0);
+        int c = sc.nextInt();
+
+        int result = Calculator(a, o, c);
+
+        if(result != Integer.MIN_VALUE) {
+            System.out.println(a + " " + o + " " + c + " = " + result);
+        } else {
+            System.out.println("False");
+        }
+    }
+
+    // 사칙연산을 계산하는 함수
+    public static int Calculator(int a, int o, int c) {
+        switch (o) {
+            case '+':
+                return add(a, c);
+            case '-' :
+                return sub(a, c);
+            case '*' :
+                return mul(a, c);
+            case '/' :
+                return div(a, c);
+            default:
+                return Integer.MIN_VALUE;
+        }
+    }
+
+    public static int add(int a, int c) {
+        return a + c;
+    }
+
+    public static int sub(int a, int c) {
+        return a - c;
+    }
+
+    public static int mul(int a, int c) {
+        return a * c;
+    }
+
+    public static int div(int a, int c) {
+        if (c == 0) {
+            return Integer.MIN_VALUE;
+        }
+        return a / c;
+    }
+}
+```
+
+### 입력:
+
+```
+10 * 3
+```
+
+### 출력:
+
+```
+10 * 3 = 30
+```
+
+### 입력:
+
+```
+5 ^ 4
+```
+
+### 출력:
+
+```
+False
+```
+
 ### 링크:[코드트리](https://www.codetree.ai/missions/5/problems/sum-from-1-to-a-certain-number?&utm_source=clipboard&utm_medium=text)
