@@ -51,7 +51,7 @@ export default Main;
 - 이렇게 동적으로 특정 변수를 선언해서 HTML 에 렌더링(중괄호 안에 작성)하는 것도 가능하다.
     - 결과:
     
-    ![스크린샷 2024-06-17 오후 3.16.30.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/04669512-c029-4691-a6e7-e5dadd129cde/5f1d2a1e-7dd0-4a27-8743-9a02d27beef5/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-06-17_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.16.30.png)
+   <img width="230" alt="스크린샷 2024-06-17 오후 3 55 18" src="https://github.com/SejinPrk/codetree-TILs/assets/150787016/c98646b2-1daa-4a03-b53b-37d702b13ef8">
     
 
 - {number} 안에서 연산을 하는 것도 가능하다.
@@ -78,9 +78,8 @@ export default Main;
 - {obj}같은 객체를 렌더링하려고 하면 오류가 발생(백지화)한다.
     - 개발자 도구를 읽어보면 이유를 알 수 있다.
 
-![스크린샷 2024-06-17 오후 3.24.24.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/04669512-c029-4691-a6e7-e5dadd129cde/f7245679-8b12-4bf5-b0fe-d2999de123c5/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-06-17_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.24.24.png)
+<img width="709" alt="스크린샷 2024-06-17 오후 3 54 38" src="https://github.com/SejinPrk/codetree-TILs/assets/150787016/def0eed9-d86c-40bf-9ead-d8a963cc945a">
 
-![스크린샷 2024-06-17 오후 3.25.10.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/04669512-c029-4691-a6e7-e5dadd129cde/70d98363-ab97-463a-9d70-be1a7c75eda4/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-06-17_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.25.10.png)
 
 - 따라서 점표기법 - {obj.a}을 이용해서 문자열이나 숫자값으로 바꿔줘야 한다.
 
@@ -116,11 +115,11 @@ export default Main;
 - 다만, 렌더링될 때에는 최상위 태그가 없는 것처럼 렌더링 되어 개발자 도구로 확인해보면 모든 요소들이 흩뿌려져 있다.
     - 메인 태그가 존재할 때: 요소들이 메인 태그 안에 묶여있다.
         
-        ![스크린샷 2024-06-17 오후 3.32.48.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/04669512-c029-4691-a6e7-e5dadd129cde/18c3a27f-e1e8-47e2-99cb-4da0a0efe024/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-06-17_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.32.48.png)
+<img width="573" alt="스크린샷 2024-06-17 오후 3 55 48" src="https://github.com/SejinPrk/codetree-TILs/assets/150787016/95dc5439-bb5b-4e4e-ac52-8970cc7b2fa8">
         
     - 빈 태그를 사용했을 때: 요소들이 묶여있지 않다.
         
-        ![스크린샷 2024-06-17 오후 3.33.12.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/04669512-c029-4691-a6e7-e5dadd129cde/93feec20-1e96-4bfa-a4a6-2fed4ae7dc40/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-06-17_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.33.12.png)
+<img width="648" alt="스크린샷 2024-06-17 오후 3 56 27" src="https://github.com/SejinPrk/codetree-TILs/assets/150787016/c397a546-fb8b-41be-ae21-7d78cfd28a71">
         
 - 선호에 따라 태그를 둘지 비울지 선택하면 된다.
 
