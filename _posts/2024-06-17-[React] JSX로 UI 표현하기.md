@@ -1,5 +1,5 @@
 ---
-title: "[REACT] JSX로 UI 표현하기"
+title: "[React] JSX로 UI 표현하기"
 excerpt: "React 기술 공부"
 categories:
   - Blog
