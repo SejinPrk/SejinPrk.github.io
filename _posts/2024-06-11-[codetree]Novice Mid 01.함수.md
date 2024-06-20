@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Code Tree - Novice Mid] 01-2. 함수: 값을 반환하는 함수"
+title: "[Code Tree - Novice Mid] 01-2. 함수: 값을 반환하는 함수 - 1"
 excerpt: "코드트리 문제 풀이 - JAVA"
 
 categories:
@@ -17,7 +17,7 @@ last_modified_at: 2024-06-16
 
 ### JAVA 문법으로 작성함.
 
-# Novice Mid: 01. 함수
+# Novice Mid: 01. 함수 - 1
 
 # 값을 반환하는 함수
 
