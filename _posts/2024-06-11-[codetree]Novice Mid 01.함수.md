@@ -15,7 +15,7 @@ date: 2024-06-11
 last_modified_at: 2024-06-16
 ---
 
-### JAVA 문법으로 작성함.
+JAVA 문법으로 작성함.
 
 # Novice Mid: 01. 함수 - 1
 
