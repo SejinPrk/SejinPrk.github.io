@@ -12,7 +12,7 @@ toc: true
 toc_sticky: true
 
 date: 2024-06-21
-last_modified_at: 2024-06-22
+last_modified_at: 2024-06-23
 ---
 
 JAVA 문법으로 작성함.
@@ -271,6 +271,136 @@ public class Main {
 
 ```
 20 20 0 15 35
+```
+
+## 6. 2개 이상의 알파벳
+
+=> 소문자 알파벳으로만 이루어진 문자열 A가 주어졌을 때, 문자열 A를 이루고 있는 서로 다른 알파벳의 수가 2개 이상인지를 판단하는 프로그램
+
+조건: 1 ≤ 문자열 A의 길이 ≤ 100
+
+-> 결과에 따라 Yes 또는 No 를 출력
+
+### 코드:
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String A = sc.nextLine();
+
+        if(twoDistinctCharacters(A)) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+    }
+
+    public static boolean twoDistinctCharacters(String s) {
+        // 첫 번째 다른 문자
+        char firstChar = s.charAt(0);
+        boolean foundSecondChar = false;
+
+        // 두 번째 다른 문자가 있는지 확인
+        for (int i = 1; i < s.length(); i++) {
+            if (s.charAt(i) != firstChar) {
+                foundSecondChar = true;
+                break;
+            }
+        }
+        return foundSecondChar;
+    }
+}
+```
+
+### 입력:
+
+```
+codetree
+```
+
+### 출력:
+
+```
+Yes
+```
+
+### 입력:
+
+```
+zzzzz
+```
+
+### 출력:
+
+```
+No
+```
+
+## 7. 두 정수에 대한 연산값 2
+
+=> 두 개의 정수 a, b가 주어지면 두 개의 숫자 중 작은 수에는 10을 더하고 큰 수에는 2를 곱하여 저장한 후 출력하는 프로그램
+
+조건: 1 ≤ a, b ≤ 200 / a ≠ b
+
+### 코드:
+
+```java
+import java.util.Scanner;
+
+class IntWrapper {
+    int value;
+
+    public IntWrapper(int value) {
+        this.value = value;
+    }
+}
+
+public class Main {
+    // call by reference대로 a와 b의 값 변경
+    public static void changeNumber(IntWrapper a, IntWrapper b) {
+        if(a.value > b.value) {
+            a.value *= 2;
+            b.value += 10;
+        }
+        else {
+            b.value *= 2;
+            a.value += 10;
+        }
+
+        return;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        IntWrapper aWrapper = new IntWrapper(a);
+        IntWrapper bWrapper = new IntWrapper(b);
+
+        changeNumber(aWrapper, bWrapper);
+
+        a = aWrapper.value;
+        b = bWrapper.value;
+
+        System.out.print(a + " " + b);
+    }
+}
+```
+
+### 입력:
+
+```
+100 200
+```
+
+### 출력:
+
+```
+110 400
 ```
 
 ### 링크:[코드트리](https://www.codetree.ai/missions/5/problems/to-exchange-two-integer-values?&utm_source=clipboard&utm_medium=text)
