@@ -1,16 +1,13 @@
 ---
 layout: post
-title: "[Code Tree - Novice Mid] 01-3. 함수: "변수의 영역"
+title: "[Code Tree - Novice Mid] 01-3. 함수: \"변수의 영역\""
 excerpt: "코드트리 문제 풀이 - JAVA"
-
 categories:
   - Blog
 tags:
   - [CodeTree]
-
 toc: true
 toc_sticky: true
-
 date: 2024-06-24
 last_modified_at: 2024-06-26
 ---
