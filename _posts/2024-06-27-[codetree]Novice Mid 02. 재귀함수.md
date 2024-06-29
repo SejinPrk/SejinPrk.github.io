@@ -9,7 +9,7 @@ tags:
 toc: true
 toc_sticky: true
 date: 2024-06-27
-last_modified_at: 2024-06-27
+last_modified_at: 2024-06-29
 ---
 
 JAVA 문법으로 작성함.
@@ -176,5 +176,104 @@ public class Main {
 ```
 ---
 
+## 4. 재귀함수의 꽃
 
-### 링크:[코드트리] (https://www.codetree.ai/missions/5/problems/repeated-output-2?&utm_source=clipboard&utm_medium=text)
+=> N이 주어지면 재귀함수를 단 하나만 이용하여 다음과 같이 출력하는 프로그램
+
+조건: 1 ≤ n ≤ 100
+
+
+### 코드:
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void printRecursive(int n) {  
+        if (n > 0) {
+            System.out.print(n + " ");
+        printRecursive(n - 1);
+            System.out.print(n + " ");
+        } 
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        printRecursive(n);
+    }
+}
+```
+
+### 입력:
+
+```
+5
+```
+
+### 출력:
+
+```
+5 4 3 2 1 1 2 3 4 5
+```
+---
+
+## 6. 재귀함수를 이용한 별 출력 2
+
+=> 정수 n의 값을 입력받아 별 출력을 다음 모양으로 재귀함수를 이용해 출력하는 프로그
+
+조건: 1 ≤ N ≤ 100
+
+
+### 코드:
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        printStar(n);
+    }
+
+    public static void printStar(int n) {
+        if(n == 0)
+            return;
+        
+        for(int i = 0; i < n; i++)
+            System.out.print("* ");
+        System.out.println();
+        printStar(n - 1);
+        for(int i = 0; i < n; i++)
+            System.out.print("* ");
+        System.out.println();
+    }
+}
+```
+
+### 입력:
+
+```
+5
+```
+
+### 출력:
+
+```
+* * * * *
+* * * *
+* * *
+* *
+*
+*
+* *
+* * *
+* * * *
+* * * * *
+```
+---
+
+### 링크:[코드트리](https://www.codetree.ai/missions/5/problems/repeated-output-2?&utm_source=clipboard&utm_medium=text)

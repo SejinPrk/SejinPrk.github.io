@@ -186,4 +186,4 @@ public class Main {
 3
 ```
 
-### 링크:[코드트리] https://www.codetree.ai/missions/5/problems/find-the-location-of-a-substring-using-a-function?&utm_source=clipboard&utm_medium=text
+### 링크:[코드트리](https://www.codetree.ai/missions/5/problems/find-the-location-of-a-substring-using-a-function?&utm_source=clipboard&utm_medium=text)
