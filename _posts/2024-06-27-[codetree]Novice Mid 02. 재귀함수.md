@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Code Tree - Novice Mid] 02. 재귀함수: 값을 반환하지 않는 재귀함수"
+title: "[Code Tree - Novice Mid] 02-1. 재귀함수: 값을 반환하지 않는 재귀함수"
 excerpt: "코드트리 문제 풀이 - JAVA"
 categories:
   - Blog
