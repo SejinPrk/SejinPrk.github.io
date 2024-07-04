@@ -1,0 +1,154 @@
+---
+layout: post
+title: "[SQL] SQL 삽입 공격(SQL Injection Attack) 차단/방지"
+excerpt: "MySQL 스터디"
+categories:
+  - Blog
+tags:
+  - [MySQL, SQL]
+toc: true
+toc_sticky: true
+date: 2024-07-04
+last_modified_at: 2024-07-04
+---
+
+# SQL 삽입 공격 차단/방지
+
+## SQL 삽입 공격(SQL Injection Attack)
+: 웹 애플리케이션에서 가장 흔한 보안 취약점 중 하나로, 이 공격은 사용자 입력을 통해 SQL 쿼리에 악의적인 코드를 삽입하여 데이터베이스를 비정상적으로 조작하거나 민감한 정보를 노출시키는 것을 목표로 한다. SQL 삽입 공격은 데이터베이스와 직접적으로 상호작용하는 웹 애플리케이션에서 발생한다. 
+(출처: chatGPT)
+
+ex. 1. 제목: aaa
+      2. 내용: bbb'), ('ccc','ccc'), ('ddd','ddd
+SQL문: insert into x_board(title, contents) values('%s', '%s')
+                                                    1     2
+최종적으로 생성된 SQL? 
+=> insert into x_board(title, contents) values ('aaa', 'bbb'), ('ccc', 'ccc'), ('ddd', 'ddd')​
+사용자가 입력한 값을 가지고 SQL문을 만들면 SQL문이 왜곡될 수 있다. 
+이런 식의 해킹 기법을 "SQL 삽입 공격"이라고 부른다. 
+
+방지책: PreparedStatement를 사용한다. 
+애초부터 분리해서 보내는 것이다.
+
+PreparedStatement를 사용하여 mysql 폴더에 있던 DAOImpl가 받을 수 있는 SQL 삽입 공격을 막아보겠다. 
+기존에 Statement stmt = 으로 되어있던 부분을 일괄수정(ctrl/cmd + shft + r/f)로 PreparedStatement stmt로 바꿔준다. 
+
+방법: 
+우선, PreparedStatement를 임포트해준다. 
+```
+import java.sql.PreparedStatement;
+```
+<AssignmentDaoImpl>라는 파일을 예시로 CRUD에 어떻게 적용해야할지 알아보겠다. 
+
+- 참고: CRUD & SQL 문법
+    Create = insert
+    Retrive(Read) = select
+    Update = update
+    Delete = delete
+
+(1) Add
+```
+  @Override
+  public void add(Assignment assignment) {
+    try (PreparedStatement pstmt = con.prepareStatement(
+          "insert into assignments(title,content,deadline) values(?,?,?)")) {
+        pstmt.setString(1, assignment.getTitle());
+        pstmt.setString(2, assignment.getContent());
+        pstmt.setDate(3, assignment.getDeadline());
+
+        pstmt.executeUpdate();
+
+    } catch (Exception e) {
+      throw new DaoException("데이터 입력 오류", e);
+    }
+  }
+```
+
+(2) Delete
+```
+@Override
+  public int delete(int no) {
+    try (PreparedStatement pstmt = con.prepareStatement(
+        "delete from assignments where assignment_no=?")) {
+      pstmt.setInt(1, no);
+        return pstmt.executeUpdate();
+
+    } catch (Exception e) {
+      throw new DaoException("데이터 삭제 오류", e);
+    }
+  }
+```
+
+(3) FindAll
+``` 
+  @Override
+  public List<Assignment> findAll() {
+    try (PreparedStatement pstmt = con.prepareStatement(
+        "select assignment_no, title, deadline from assignments order by assignment_no desc");
+        ResultSet rs = pstmt.executeQuery()) {
+
+      ArrayList<Assignment> list = new ArrayList<>();
+
+      while (rs.next()) {
+        Assignment assignment = new Assignment();
+        assignment.setNo(rs.getInt("assignment_no"));
+        assignment.setTitle(rs.getString("title"));
+        assignment.setDeadline(rs.getDate("deadline"));
+
+        list.add(assignment);
+      }
+      return list;
+
+    } catch (Exception e) {
+      throw new DaoException("데이터 가져오기 오류", e);
+    }
+  }
+```
+
+(4) FindBy
+```
+@Override
+  public Assignment findBy(int no) {
+    try (PreparedStatement pstmt = con.prepareStatement(
+        "select * from assignments where assignment_no=?")){
+
+      pstmt.setInt(1, no);
+
+      try(ResultSet rs = pstmt.executeQuery()) {
+
+        if (rs.next()) {
+          Assignment assignment = new Assignment();
+          assignment.setNo(rs.getInt("assignment_no"));
+          assignment.setTitle(rs.getString("title"));
+          assignment.setContent(rs.getString("content"));
+          assignment.setDeadline(rs.getDate("deadline"));
+          return assignment;
+        }
+        return null;
+      }
+
+    } catch (Exception e) {
+      throw new DaoException("데이터 가져오기 오류", e);
+    }
+  }
+```
+
+(4) Update
+```
+@Override
+  public int update(Assignment assignment) {
+    try (PreparedStatement pstmt = con.prepareStatement(
+          "update assignments set title=?, content=?, deadline=? where assignment_no=?")) {
+      pstmt.setString(1, assignment.getTitle());
+      pstmt.setString(2, assignment.getContent());
+      pstmt.setDate(3, assignment.getDeadline());
+      pstmt.setInt(4, assignment.getNo());
+      return pstmt.executeUpdate();
+
+    } catch (Exception e) {
+      throw new DaoException("데이터 변경 오류", e);
+    }
+  }
+```
+
+🚨 주의: '?' 물음표를 싱글 쿼테이션 안에 넣으면 일반 문자열로 물음표를 인식하게 된다. 
