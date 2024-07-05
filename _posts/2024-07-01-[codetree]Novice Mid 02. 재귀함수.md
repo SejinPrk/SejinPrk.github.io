@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Code Tree - Novice Mid] 02-2. 재귀함수: 값을 반환하는 재귀함수"
+title: "[Code Tree - Novice Mid] 02-2. 재귀함수: 값을 반환하는 재귀함수 - 1"
 excerpt: "코드트리 문제 풀이 - JAVA"
 categories:
   - Blog
@@ -15,7 +15,7 @@ JAVA 문법으로 작성함.
 
 # Novice Mid: 02. 재귀함수 - 2
 
-# 값을 반환하는 재귀함수
+# 값을 반환하는 재귀함수 - 1
 
 ## 1. 1부터 특정 수까지의 합 2
 
@@ -96,6 +96,113 @@ public class Main {
 ```
 ---
 
-## 3. 각 자리 숫자들 중 짝수를 제외한 합
+## 3. 1이 되는 순간까지
+
+=> 정수 N이 짝수이면 2로 나누고, 홀수이면 3으로 나눈 몫을 취하는 작업을 반복하다가 그 값이 1이 되면 그때까지 진행한 작업의 횟수를 구하는 프로그램
+
+조건: 1 ≤ N ≤ 1,000,000
+
+### 코드:
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static int F(int n) {
+        // Default 케이스: N이 1이면 작업 종료
+        if (n == 1) {
+            return 0;
+        }
+        // 짝수인 경우: 2로 나눈다
+        else if (n % 2 == 0) {
+            return 1 + F(n / 2);
+        }
+        // 홀수인 경우: 3으로 나눈 몫을 취한다
+        else {
+            return 1 + F(n / 3);
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        System.out.println(F(n));
+    }
+}
+
+```
+
+### 입력:
+
+```
+230
+```
+
+### 출력:
+
+```
+6
+```
+---
+
+## 4. 재귀함수를 이용한 피보나치 수
+
+=> N번째 피보나치 수를 구하는 프로그램
+
+조건: 1 ≤ N ≤ 20
+
+### 코드: 
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static int F(int n) {
+        // 종료 조건
+        if (n == 0) 
+            return 0;
+        if(n == 1)
+            return 1;
+
+        int[] fib = new int[n + 1];
+        fib[0] = 0;
+        fib[1] = 1;
+
+        for (int i = 2; i <= n; i++) {
+            fib[i] = fib[i - 1] + fib[i - 2];
+        }
+
+        return fib[n];
+    }
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        System.out.println(F(n));
+    }
+}
+```
+
+### 입력:
+
+```
+8
+```
+
+### 출력:
+
+```
+21
+```
+---
+
+## 5. Factorial
+=>
+
+---
+
+## 6. 홀수 짝수에 따른 출력값
+=> 
+
+---
 
 ### 링크: [코드트리](https://www.codetree.ai/missions/5/problems/sum-from-1-to-a-certain-number-2?&utm_source=clipboard&utm_medium=text)
