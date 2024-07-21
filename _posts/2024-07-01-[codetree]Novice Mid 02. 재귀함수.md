@@ -9,8 +9,9 @@ tags:
 toc: true
 toc_sticky: true
 date: 2024-07-01
-last_modified_at: 2024-07-02
+last_modified_at: 2024-07-21
 ---
+
 JAVA 문법으로 작성함.
 
 # Novice Mid: 02. 재귀함수 - 2
@@ -24,6 +25,7 @@ JAVA 문법으로 작성함.
 조건: 1 ≤ N ≤ 100
 
 ### 코드:
+
 ```java
 import java.util.Scanner;
 
@@ -31,7 +33,7 @@ public class Main {
     public static int fact(int n) {
         if(n == 1)
             return 1;
-        
+
         return fact(n - 1) + n;
     }
     public static void main(String[] args) {
@@ -53,6 +55,7 @@ public class Main {
 ```
 5050
 ```
+
 ---
 
 ## 2. 각 자리 숫자의 제곱
@@ -62,6 +65,7 @@ public class Main {
 조건: 1 ≤ N ≤ 99,999,999
 
 ### 코드:
+
 ```java
 import java.util.Scanner;
 
@@ -94,6 +98,7 @@ public class Main {
 ```
 91
 ```
+
 ---
 
 ## 3. 1이 되는 순간까지
@@ -103,6 +108,7 @@ public class Main {
 조건: 1 ≤ N ≤ 1,000,000
 
 ### 코드:
+
 ```java
 import java.util.Scanner;
 
@@ -142,6 +148,7 @@ public class Main {
 ```
 6
 ```
+
 ---
 
 ## 4. 재귀함수를 이용한 피보나치 수
@@ -150,14 +157,15 @@ public class Main {
 
 조건: 1 ≤ N ≤ 20
 
-### 코드: 
+### 코드:
+
 ```java
 import java.util.Scanner;
 
 public class Main {
     public static int F(int n) {
         // 종료 조건
-        if (n == 0) 
+        if (n == 0)
             return 0;
         if(n == 1)
             return 1;
@@ -172,7 +180,7 @@ public class Main {
 
         return fib[n];
     }
-    
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -193,15 +201,107 @@ public class Main {
 ```
 21
 ```
+
 ---
 
 ## 5. Factorial
-=>
+
+=> 재귀함수를 이용하여 n!(팩토리얼) 값을 구하는 프로그램
+
+조건: 1 ≤ N ≤ 10
+
+### 코드:
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static int factorial(int n) {
+        if (n == 0 || n == 1) {
+            return 1;
+        }
+        return n * factorial(n - 1);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        System.out.println(factorial(n));
+    }
+}
+```
+
+### 입력:
+
+```
+5
+```
+
+### 출력:
+
+```
+120
+```
 
 ---
 
 ## 6. 홀수 짝수에 따른 출력값
-=> 
+
+=> 정수 N이 홀수인 경우에는 1부터 N까지의 홀수를, N이 짝수인 경우에는 2부터 N까지의 짝수의 합을 출력하는 프로그램을(재귀 함수)
+
+조건: 1 ≤ N ≤ 100
+
+### 코드:
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static int sumOdds(int n) {
+        // n이 홀수일 때
+        if (n <= 0) {
+            return 0;
+        } else if (n % 2 != 0) {
+            return n + sumOdds(n - 2);
+        } else {
+            return sumOdds(n - 1);
+        }
+    }
+
+    // n이 짝수일 때
+    public static int sumEvens(int n) {
+        if (n < 2) {
+            return 0;
+        } else if (n % 2 == 0) {
+            return n + sumEvens(n - 2);
+        } else {
+            return sumEvens(n - 1);
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+    if (n % 2 == 0)
+        System.out.println(sumEvens(n));
+    else
+        System.out.println(sumOdds(n));
+    }
+}
+```
+
+### 입력:
+
+```
+8
+```
+
+### 출력:
+
+```
+20
+```
 
 ---
 
