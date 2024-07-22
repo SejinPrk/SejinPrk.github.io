@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Java] 람다(Lambda) 표현식"
+title: "[Java] 람다 표현식(Java Lambda Expressions)"
 excerpt: "Java"
 categories:
   - Blog
