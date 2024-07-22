@@ -1,20 +1,17 @@
 // Home Header
 //
 // Styles for the home header.
-
 .home-header-bar {
   width: 100%;
   height: 100%;
-
   -webkit-box-shadow: 0 1em 1em -.9em var(--border-color);
-     -moz-box-shadow: 0 1em 1em -.9em var(--border-color);
-          box-shadow: 0 1em 1em -.9em var(--border-color);
+  -moz-box-shadow: 0 1em 1em -.9em var(--border-color);
+  box-shadow: 0 1em 1em -.9em var(--border-color);
 }
 
 .home-header-menu {
   a {
     border-bottom: 1px solid rgba(0, 0, 0, 0);
-
     &:hover,
     &:focus {
       color: inherit;
@@ -22,8 +19,49 @@
       border-bottom-color: var(--link-color);
     }
   }
-
   .current-item {
     border-bottom-color: var(--link-color);
+  }
+  
+  // 언어 선택 드롭다운 스타일
+  .pure-menu-has-children {
+    position: relative;
+
+    .pure-menu-link:after {
+      content: "▾";
+      padding-left: 0.5em;
+    }
+
+    .pure-menu-children {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      background-color: var(--body-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 0 0 4px 4px;
+      min-width: 100%;
+      z-index: 100;
+
+      .pure-menu-item {
+        display: block;
+        width: 100%;
+      }
+
+      .pure-menu-link {
+        padding: 0.5em 1em;
+        border-bottom: none;
+        
+        &:hover,
+        &:focus {
+          background-color: var(--border-color);
+        }
+      }
+    }
+
+    &:hover > .pure-menu-children,
+    &:focus-within > .pure-menu-children {
+      display: block;
+    }
   }
 }

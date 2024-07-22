@@ -3,10 +3,25 @@
     {% if site.data.archive %}
     <ul class="home-header-menu pure-menu-list">
       {% for item in site.data.archive %}
-        <li class="pure-menu-item">
-          <a href="{{ item.url | relative_url }}" class="pure-menu-link {% if page.url == item.url %}current-item{% endif %}"">{{ item.title }}</a>
-        </li>
+      <li class="pure-menu-item">
+        <a href="{{ item.url | relative_url }}" class="pure-menu-link {% if page.url == item.url %}current-item{% endif %}">{{ item.title }}</a>
+      </li>
       {% endfor %}
+      <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+        <a href="#" id="menuLink1" class="pure-menu-link">🌐</a>
+        <ul class="pure-menu-children">
+          {% for lang in site.languages %}
+          <li class="pure-menu-item">
+            <a href="{% if lang == site.default_lang %}{{ page.url | relative_url }}{% else %}{{ page.url | prepend: '/' | prepend: lang | relative_url }}{% endif %}" class="pure-menu-link">
+              {% if lang == 'ko' %}한국어
+              {% elsif lang == 'en' %}English
+              {% elsif lang == 'fr' %}Français
+              {% endif %}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </li>
     </ul>
     {% endif %}
   </div>
