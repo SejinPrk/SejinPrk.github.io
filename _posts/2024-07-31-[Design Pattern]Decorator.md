@@ -5,8 +5,8 @@ excerpt: "디자인 패턴"
 categories:
   - Blog
 tags:
-  - designPattern
-  - java
+  - designpattern
+  - Java
 toc: true
 toc_sticky: true
 date: 2024-07-31
