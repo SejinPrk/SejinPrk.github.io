@@ -8,7 +8,7 @@
 
 body {
   margin: 0;
-  font-family: var(--body-font);
+  font-family: 'MaruBuri', var(--body-font);
   font-size: var(--body-font-size);
   line-height: var(--body-line-height);
   color: var(--body-color);
@@ -67,4 +67,8 @@ mark {
   padding: .15rem;
   background-color: var(--yellow-100);
   border-radius: .125rem;
+}
+
+h1, h2, h3 {
+  font-family: 'MaruBuriBold', var(--body-font);
 }
