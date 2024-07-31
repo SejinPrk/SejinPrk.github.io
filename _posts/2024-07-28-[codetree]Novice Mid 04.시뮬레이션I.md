@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Code Tree - Novice Mid] 04. 시뮬레이션 I: 날짜와 시간 계산"
+title: "[Code Tree - Novice Mid] 04-1. 시뮬레이션 I: 날짜와 시간 계산"
 excerpt: "코드트리 문제 풀이 - JAVA"
 categories:
   - Blog
@@ -16,7 +16,7 @@ JAVA 문법으로 작성함.
 
 # Novice Mid: 04. 시뮬레이션 I
 
-# 날짜와 시간 계산
+# 1. 날짜와 시간 계산
 
 ## 1. Time to Time
 
