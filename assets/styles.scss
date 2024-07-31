@@ -31,7 +31,6 @@
 @import "toc";
 @import "alignment";
 @import "syntax-light";
-
 @media (prefers-color-scheme: dark) {
   @import "syntax-dark";
 }
@@ -53,48 +52,9 @@
   }
 }
 
-// Dark mode styles
-body {
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
 body.dark-mode {
-  background-color: var(--gray-900);
-  color: var(--gray-100);
-
-  a {
-    color: var(--blue-300);
-    
-    &:hover,
-    &:focus {
-      color: var(--blue-200);
-    }
-  }
-
-  .sidebar {
-    background-color: var(--gray-800);
-  }
-
-  .post-title,
-  .post-title a {
-    color: var(--gray-100);
-  }
-
-  code {
-    background-color: var(--gray-800);
-    color: var(--gray-300);
-  }
-
-  pre {
-    background-color: var(--gray-800);
-  }
-
-  .message {
-    background-color: var(--gray-800);
-  }
-
-  .pagination-item {
-    background-color: var(--gray-800);
-    border: 1px solid var(--gray-700);
-  }
+  background-color: #333;
+  color: #fff;
 }
+
+/* 다른 다크 모드 스타일을 여기에 추가 */
