@@ -5,7 +5,7 @@ excerpt: "코드트리 문제 풀이 - JAVA"
 categories:
   - Blog
 tags:
-  - [CodeTree], [Java]
+  - [CodeTree]
 toc: true
 toc_sticky: true
 date: 2024-07-28
