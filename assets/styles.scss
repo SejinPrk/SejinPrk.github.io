@@ -71,10 +71,13 @@
 #darkModeToggle {
   cursor: pointer;
   padding: 0.5em 1em;
-  
-  i {
-    font-size: 1.2em;
-  }
+  background: none;
+  border: none;
+  color: inherit;
+}
+
+#darkModeToggle i {
+  font-size: 1.2em;
 }
 
 // 다크 모드 스타일
@@ -118,17 +121,45 @@ body.dark-mode {
     border: 1px solid var(--gray-700);
   }
 
-  // 추가적인 다크 모드 스타일
   .home-header {
-    background-color: var(--gray-800);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--gray-100);
+  }
+  
+  .home-header-bar {
+    width: 100%;
+  }
+  
+  .home-header-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .pure-menu-item {
+    margin-left: 1rem;
+  }
+  
+  .pure-menu-link {
+    text-decoration: none;
+    color: var(--body-color);
   }
 
-  .pure-menu-link {
-    color: var(--gray-300);
-
-    &:hover,
-    &:focus {
-      background-color: var(--gray-700);
+  @media (max-width: 48em) {
+    .home-header-menu {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .pure-menu-item {
+      margin-left: 0;
+      margin-top: 0.5rem;
     }
   }
 
