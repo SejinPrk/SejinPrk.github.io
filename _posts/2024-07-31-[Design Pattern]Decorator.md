@@ -19,7 +19,8 @@ last_modified_at: 2024-07-31
 
 : 객체 지향 프로그래밍에서 사용되는 디자인 패턴 중 하나
 
-(1) 목적: 객체에 동적으로 새로운 책임(기능)을 추가할 수 있게 합니다.
+(1) 목적: 객체에 동적으로 새로운 책임(기능)을 추가할 수 있게 한다.
+
 (2) 구조:
 - Component: 기본 기능을 정의하는 인터페이스 또는 추상 클래스
 - ConcreteComponent: 기본 기능을 구현한 클래스
@@ -49,7 +50,7 @@ last_modified_at: 2024-07-31
   - BufferedDataInputStream 분해: BufferedInputStream, DataInputStream, FileInputStream
   - BufferedDataOutputStream 분해: BufferedOutputStream, DataOutputStream, FileOutputStream
     ​
-    자바에서 제공하는 기능: Java I/O Stream API를 사용해 실습을 해보려고 한다.
+자바에서 제공하는 기능: Java I/O Stream API를 사용해 실습을 해보려고 한다.
 
 ---
 
@@ -108,6 +109,7 @@ in2.read();
 ```
 
 (3) 파일 읽기 + 버퍼 + 데이터 가공
+
 FileInputStream ---4.읽기---> 파일 3. read( )
 ↪️ BufferedInputStream 2. read( )
 ↪️ DataInputStream <---1.사용---
@@ -161,7 +163,7 @@ try(FileOutputStream out0 = new FileOutputStream("assignment.data");
 
 ---
 
-## save/load Assignment 전체 코드
+## 6. save/load Assignment 전체 코드
 
 ```java
 // DataInputStream을 사용하여 "assignment.data" 파일에서 데이터를 읽어온다.
