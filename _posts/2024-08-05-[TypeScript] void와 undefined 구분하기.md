@@ -12,7 +12,7 @@ toc_sticky: true
 date: 2024-08-05
 last_modified_at: 2024-08-05
 ---
-# 1. 함수 타입(Function Type)
+## 1. 함수 타입(Function Type)
 
 함수 타입(function type)은 프로그래밍 언어에서 함수의 형태나 서명을 설명하는 개념으로, 주로 TypeScript와 같은 정적 타입 언어에서 사용되며 함수의 매개변수 타입과 반환 값의 타입을 지정한다. 함수 타입의 주요 아이디어는 다음과 같다 : 
 
@@ -28,20 +28,20 @@ last_modified_at: 2024-08-05
 (response: any) => void
 ```
 
-# 2. TypeScript의 함수 타입에서 void와 undefined의 의미
+## 2. TypeScript의 함수 타입에서 void와 undefined의 의미
 
-## (1) Void
+### (1) Void
 
 - 함수가 어떤 값도 반환하지 않음을 명시적으로 나타낸다.
 - 주로 함수의 부작용(side effect)에 의미가 있는 경우 사용한다.
 - `return` 문을 사용하지 않거나, 값 없이 `return;`만 사용할 수 있다.
 
-## (2) Undefined
+### (2) Undefined
 
 - 함수가 명시적으로 `undefined` 값을 반환함을 나타낸다.
 - 함수가 실제로 `undefined`를 반환해야 한다.
 
-### * 주요 차이점:
+#### * 주요 차이점:
 
 1. 반환(리턴) 값 처리:
     - `void` 함수의 반환 값은 무시된다.
@@ -67,7 +67,7 @@ function findItem(id: number): string | undefined {
 }
 ```
 
-# 3. JS와 TS에서 void, undefined를 다루는 방식의 차이
+## 3. JS와 TS에서 void, undefined를 다루는 방식의 차이
 
 JavaScript에서는 `void`와 `undefined`의 처리가 TypeScript와는 다르다. 
 
