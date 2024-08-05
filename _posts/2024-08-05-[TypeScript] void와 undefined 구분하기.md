@@ -12,9 +12,6 @@ toc_sticky: true
 date: 2024-08-05
 last_modified_at: 2024-08-05
 ---
-
-# [TypeScript] void와 undefined 구분하기
-
 # 1. 함수 타입(Function Type)
 
 함수 타입(function type)은 프로그래밍 언어에서 함수의 형태나 서명을 설명하는 개념으로, 주로 TypeScript와 같은 정적 타입 언어에서 사용되며 함수의 매개변수 타입과 반환 값의 타입을 지정한다. 함수 타입의 주요 아이디어는 다음과 같다 : 
