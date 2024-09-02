@@ -1,16 +1,16 @@
 ---
-layout: post
 title: "[Java] length() vs. length 비교"
-excerpt: "java"
+excerpt: "Java 공부"
 categories:
   - Blog
 tags:
-  - [java]
+  - java
 toc: true
 toc_sticky: true
 date: 2024-09-02
 last_modified_at: 2024-09-02
 ---
+
 java에서 length()와 length에는 차이가 존재한다. 
 
 먼저, 메서드는 특정 객체에 대해 동작하는 함수를 의미하며 호출할 때 항상 괄호를 붙여야 한다.  반면, 어떤 때에는 괄호를 붙이지 않는 속성도 있는데, 이는 필드 또는 변수로 값을 직접 참조하는 경우다. 
