@@ -1,9 +1,16 @@
 ---
 layout: post
 title: Postman을 이용해 ChatGPT(Open AI) API 사용하기
+excerpt: "Postman 활용"
+categories:
+  - Blog
 tags:
 - postman
-date: 2024-10-05
+- api
+toc: true
+toc_sticky: true
+date: 2024-10-04
+last_modified_at: 2024-10-05
 ---
 
 Postman을 사용해서 Rest 방식으로 간단하게 챗 gpt의 API를 호출해서 사용하는 방식을 알아보려고 한다.
