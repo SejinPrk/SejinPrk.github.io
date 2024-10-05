@@ -15,7 +15,7 @@ last_modified_at: 2024-10-05
 
 Postman을 사용해서 Rest 방식으로 간단하게 챗 gpt의 API를 호출해서 사용하는 방식을 알아보려고 한다.
 
-# 1. Key 받아오기
+## 1. Key 받아오기
 
 [OpenAI의 홈페이지](https://platform.openai.com/chat-completions)에 들어가면 개발자 공간이 있는데, 대시보드에서 새 시크릿 API 키를 발급받을 수 있다.
 
@@ -24,7 +24,7 @@ Postman을 사용해서 Rest 방식으로 간단하게 챗 gpt의 API를 호출�
 
 키는 한 번 발급받으면 다시 볼 수 없으니 미리 메모장 같은 곳에 저장해두는 게 좋다.
 
-# 2. post 요청 URL
+## 2. post 요청 URL
 
 URL: [https://api.openai.com/v1/chat/completions](https://api.openai.com/v1/chat/completions) 
 
@@ -33,7 +33,7 @@ URL: [https://api.openai.com/v1/chat/completions](https://api.openai.com/v1/chat
 ![%ED%99%94%EB%A9%B4_%EC%BA%A1%EC%B2%98_2024-10-04_141726](https://github.com/user-attachments/assets/d8a51041-ee6d-4b55-9f3c-2ff6763ca726)
 
 
-# 3. Header 설정
+## 3. Header 설정
 
 먼저 Authorization에는 값으로 <Bearer $API_KEY>를 입력해준다.
 
@@ -49,7 +49,7 @@ Bearer 사이에 한 칸 띄워야 한다!
 ![%ED%99%94%EB%A9%B4_%EC%BA%A1%EC%B2%98_2024-10-04_143435](https://github.com/user-attachments/assets/df2efe52-863e-4b47-a487-525e2f21a65e)
 
 
-# 4. Body 설정
+## 4. Body 설정
 
 헤더 세팅을 완료했으면 바디는 raw data로 두고 예시 값을 넣어둔다. 
 
@@ -69,7 +69,7 @@ chatGPT가 알려준 값을 그대로 넣었다.
 
 ```
 
-# 5. API 호출
+## 5. API 호출
 
 다 완료되었으면 send를 눌러 API가 정상적으로 호출되는지 확인해볼 수 있다.
 
@@ -108,7 +108,7 @@ chatGPT가 알려준 값을 그대로 넣었다.
 }
 ```
 
-## * 참고: insufficient quota 에러 발생 시 대처법
+### * 참고: insufficient quota 에러 발생 시 대처법
 
 ```json
 {
