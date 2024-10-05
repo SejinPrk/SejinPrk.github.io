@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Postman을 이용해 ChatGPT(Open AI) API 사용하기
+title: "Postman을 이용해 ChatGPT(Open AI) API 사용하기"
 excerpt: "Postman 활용"
 categories:
   - Blog
 tags:
-- postman
-- api
+  - postman
+  - api
 toc: true
 toc_sticky: true
 date: 2024-10-04
