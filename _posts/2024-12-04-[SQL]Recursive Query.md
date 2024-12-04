@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[SQL]단방향 통신으로 채팅 기능 구현하기"
+title: "재귀 쿼리(Recursive Query) 완벽 가이드"
 excerpt: "SQL"
 categories:
   - Blog
@@ -11,7 +11,6 @@ toc_sticky: true
 date: 2024-12-04
 last_modified_at: 2024-12-04
 ---
-# SQL 재귀 쿼리 (Recursive Query) 완벽 가이드
 
 관리자 프로젝트를 작업하던 도중 재귀 쿼리를 마주하는 일이 생겼다. 
 
