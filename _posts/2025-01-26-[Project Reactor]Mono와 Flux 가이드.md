@@ -16,7 +16,7 @@ last_modified_at: 2025-01-26
 
 Project Reactor는 Spring WebFlux의 핵심 리액티브 라이브러리([공식문서](https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html#from-org.reactivestreams.Publisher-))이다. 이 글에서는 Reactor의 두 핵심 타입인 Mono와 Flux의 차이점과 실제 활용 방법에 대해 알아보려고 한다.
 
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="20 79 907 417" width="907" height="417" id="svg151">
+![flux](https://github.com/user-attachments/assets/70f32e97-1bd8-4025-9920-cd2fff4ba366)<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="20 79 907 417" width="907" height="417" id="svg151">
  <defs id="defs16">
   <font-face font-family="'Tahoma','Nimbus Sans L'" font-size="24" panose-1="2 11 5 2 2 1 4 2 2 3" units-per-em="1000" underline-position="-75" underline-thickness="50" slope="0" x-height="450" cap-height="687" ascent="918" descent="-230" font-weight="400" id="font-face2" stemv="0" stemh="0" accent-height="0" ideographic="0" alphabetic="0" mathematical="0" hanging="0" v-ideographic="0" v-alphabetic="0" v-mathematical="0" v-hanging="0" strikethrough-position="0" strikethrough-thickness="0" overline-position="0" overline-thickness="0">
    <font-face-src>
