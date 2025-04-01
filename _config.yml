@@ -1,7 +1,7 @@
 # Setup
-title: Sejin&#39;s Blog ♥
+title: Sejin&#39;s Tech Blog ♥
 description: ☺ Seoul, Korea <br>☻ Lille, France
-url: https://github.com/SejinPrk
+url: https://sejinprk.github.io
 avatar: /profile.jpeg
 paginate: 10
 permalink: pretty
@@ -42,7 +42,6 @@ logo: logo.png
 social:
   name: Sejin Park
   links:
-    - https://www.instagram.com/sejinprk/
     - https://github.com/SejinPrk
 google_site_verification: xxxxx
 lang: en
